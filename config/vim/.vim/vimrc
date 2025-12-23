@@ -1,0 +1,18 @@
+" ============================================
+" CONFIGURACIÓN PRINCIPAL DE VIM
+" ============================================
+
+" Cargar plugins
+source ~/.vim/config/plugins.vim
+
+" Cargar configuración general
+source ~/.vim/config/settings.vim
+
+" Cargar configuración de temas
+source ~/.vim/config/themes.vim
+
+" Cargar keymaps
+source ~/.vim/config/keymaps.vim
+
+" Cargar configuración de plugins
+source ~/.vim/config/plugin-settings.vim

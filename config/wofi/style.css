@@ -1,0 +1,70 @@
+/* Wofi Gruvbox Dark Theme */
+
+* {
+  font-family: JetBrainsMono Nerd Font;
+  font-size: 14px;
+}
+
+window {
+  margin: 0px;
+  border: 2px solid #689d6a;
+  background-color: #282828;
+  border-radius: 8px;
+}
+
+#input {
+  margin: 10px;
+  padding: 10px;
+  border: 2px solid #504945;
+  background-color: #3c3836;
+  color: #ebdbb2;
+  border-radius: 4px;
+}
+
+#input:focus {
+  border: 2px solid #689d6a;
+}
+
+#inner-box {
+  margin: 10px;
+  background-color: #282828;
+}
+
+#outer-box {
+  margin: 0px;
+  background-color: #282828;
+}
+
+#scroll {
+  margin: 0px;
+}
+
+#text {
+  margin: 5px;
+  color: #ebdbb2;
+}
+
+#entry {
+  padding: 8px;
+  margin: 2px;
+  background-color: #282828;
+  border-radius: 4px;
+}
+
+#entry:selected {
+  background-color: #504945;
+  border-left: 3px solid #689d6a;
+}
+
+#entry:hover {
+  background-color: #3c3836;
+}
+
+#entry:selected #text {
+  color: #8ec07c;
+  font-weight: bold;
+}
+
+#img {
+  margin-right: 10px;
+}

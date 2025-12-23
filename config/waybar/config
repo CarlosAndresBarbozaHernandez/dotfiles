@@ -1,0 +1,123 @@
+{
+"layer": "top",
+"exclusive": true,
+"reload-on-style-change": true,
+"position": "bottom",
+"spacing": 0,
+"modules-left": [
+"sway/workspaces"
+],
+"modules-center": [
+"clock"
+],
+"modules-right": [
+"tray",
+"idle_inhibitor",
+"network",
+"bluetooth",
+"backlight",
+"wireplumber#sink",
+"wireplumber#source",
+"battery"
+],
+"tray": {
+"icon-size": 15,
+"spacing": 10
+},
+"clock": {
+"format": "{:%I:%M %p}",
+"format-alt": "{:%A, %B %d, %Y}",
+"tooltip-format": "<tt>{calendar}</tt>",
+"calendar": {
+"mode": "year",
+"mode-mon-col": 3,
+"weeks-pos": "right",
+"on-scroll": 1,
+"on-click-right": "mode"
+}
+},
+"sway/workspaces": {
+"format": "{icon}",
+"disable-scroll": true,
+"all-outputs": true,
+"format-icons": {
+"focused": "",
+"default": "",
+"urgent": ""
+}
+},
+"sway/window": {
+"format": "{title}",
+"max-length": 40
+},
+"mpris": {
+"format": "{player_icon} {dynamic}",
+"format-paused": "{status_icon} {dynamic}",
+"player-icons": {
+"default": "▶",
+"mpv": "🎵"
+},
+"status-icons": {
+"paused": "⏸"
+},
+"max-length": 30
+},
+"idle_inhibitor": {
+"format": "{icon}",
+"format-icons": {
+"activated": "",
+"deactivated": ""
+}
+},
+"network": {
+"format-ethernet": "",
+"format-wifi": "{icon}",
+"format-disconnected": "",
+"format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+"on-click": "ghostty --title=nmtui -e nmtui",
+"interval": 5
+},
+"wireplumber#sink": {
+"format": "{icon}",
+"format-muted": "",
+"format-icons": {
+"default": ["", "", ""]
+},
+"tooltip-format": "{volume}%",
+"on-click": "ghostty --title=wiremix -e wiremix",
+"on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+},
+"wireplumber#source": {
+"node-type": "Audio/Source",
+"format": "",
+"format-muted": "",
+"tooltip-format": "{volume}%",
+"on-click": "ghostty --title=wiremix -e wiremix",
+"on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
+},
+"backlight": {
+"device": "intel_backlight",
+"format": "{icon}",
+"format-icons": ["󰃞", "󰃟", "󰃝", "󰃠"],
+"tooltip-format": "{percent}%"
+},
+"bluetooth": {
+  "format": "{icon}",
+  "format-disabled": "󰂲",
+  "format-icons": {
+    "enabled": "",
+    "disabled": "󰂲"
+  },
+  "tooltip-format": "{status}",
+  "on-click": "ghostty --title=bluetui -e bluetui"
+},
+
+"battery": {
+"format": "{icon}",
+"tooltip-format": "{capacity}% {timeTo}",
+"format-icons": {
+"default": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+"charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"]
+}
+}
+}

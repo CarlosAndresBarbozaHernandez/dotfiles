@@ -1,0 +1,38 @@
+# --------------------------------------------------
+# Configuración principal de Sway
+# Archivo mínimo: solo includes
+# --------------------------------------------------
+
+# Variables globales (mod, terminal, direcciones)
+include $HOME/.config/sway/env/variables.conf
+include $HOME/.config/sway/env/dark-theme.conf
+
+# Tema visual (colores, bordes, gaps)
+include $HOME/.config/sway/theme/colors-gruvbox.conf
+include $HOME/.config/sway/theme/gaps.conf
+include $HOME/.config/sway/theme/borders.conf
+
+# Configuración de ventanas
+include $HOME/.config/sway/windows/defaults.conf
+include $HOME/.config/sway/windows/rules.conf
+
+# Entradas (touchpad, teclado, mouse)
+include $HOME/.config/sway/input/touchpad.conf
+
+# Monitores / pantallas
+include $HOME/.config/sway/output/monitors.conf
+
+# Atajos de teclado
+include $HOME/.config/sway/keybindings/launchers.conf
+include $HOME/.config/sway/keybindings/system.conf
+include $HOME/.config/sway/keybindings/navigation.conf
+include $HOME/.config/sway/keybindings/workspaces.conf
+include $HOME/.config/sway/keybindings/layout.conf
+include $HOME/.config/sway/keybindings/resize.conf
+include $HOME/.config/sway/keybindings/scratchpad.conf
+
+# Barra de estado
+include $HOME/.config/sway/bar/bar.conf
+
+# Includes del sistema
+include $HOME/.config/sway/includes/system.conf
